@@ -43,4 +43,6 @@ Perform below task in laravel framework:
 
 ## Screenshots
 
-![Alt text](https://github.com/anup-basnet/children_data_crud/tree/main/public/Screenshot.png "Table")
+![Alt text](/public//Screenshot.png "Table")
+
+![Alt text](https://raw.githubusercontent.com/anup-basnet/children_data_crud/main/public/Screenshot.png)
