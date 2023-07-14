@@ -3,8 +3,8 @@
 ## Contents
 
 -   [Steps Tp Run](##Steps-to-run)
-    [Challenge Information](#Challenge)
-    [Screenshot](##Screenshot)
+-   [Challenge Information](#Challenge)
+-   [Screenshot](#screenshots)
 
 ## Steps to run
 
