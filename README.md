@@ -1,66 +1,46 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## Children Data CRUD - Laravel
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Steps to run
 
-## About Laravel
+-   download zip file or clone the project
+-   cd children_data_crud
+-   open terminal and run cp .env.example .env
+-   open .env and update DB_DATABASE with your database details
+-   run: composer install
+-   run: npm install
+-   run: php artisan key:generate
+-   run: php artisan migrate:fresh --seed
+-   run: php artisan serve
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Challenge
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Perform below task in laravel framework:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+-   A html table have following columns:
+    Action, Child First Name, Child Middle Name, Child Last Name, Child Age, Gender, Different Address?, Child Address, Child City, Child State, Country, Child Zip Code
 
-## Learning Laravel
+-   Above table there will be a "Add New" button when clicking this button a new row will be added to table. At first column named "Action" there will be a Delete button in every row. When clicking this button row will be deleted.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+-   Gender and Country are dropdowns. "Different Address" is checkbox and other fields are input text.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+-   By Default, "Different Address" is unchecked and fields (Child Address, Child City, Child State, Country, and Zip Code) are disabled.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+-   When "Different Address" is checked then only fields (Child Address, Child City, Child State, Country, and Zip Code) are enabled.
 
-## Laravel Sponsors
+-   Fields (Child First Name, Child Middle Name, Child Last Name, Child Age, Gender) are required fields.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+-   Fields (Child First Name, Child Middle Name, Child Last Name, Child Age, Child Address, Child City, Child State, Child Zip) do not accept special symbols.
 
-### Premium Partners
+-   Fields (Child Age, Child Zip) accept only numbers.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+-   When Page is opened data is fetched from database if exists.
 
-## Contributing
+-   At last there will be Save button. When Save button is clicked data is saved in database.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+-   The form is also inside table. When clicking "Add New" button a new row will be added inside table. Then we fill up the row and click "Save" button. When reloading the page the data is fetched from database and shown in the same table where user can modify data and update it.
 
-## Code of Conduct
+-   When validation message is shown in the form, the previously filled data should not be removed. For eg. suppose I have not filled up first name filed and I tried to Save data. Then validation message is shown for First Name. In this case previously inputed/selected data in the form should not be removed. Like if I have checked "Different Address?" checked box then it should not be removed. Like if I have selected country from dropdown then it should not be unselected.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Screenshots
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+![Alt text](https://github.com/anup-basnet/children_data_crud/tree/main/public/Screenshot.png "Table")
