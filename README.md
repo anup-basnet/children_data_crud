@@ -1,4 +1,10 @@
-## Children Data CRUD - Laravel
+# Children Data CRUD - Laravel
+
+## Contents
+
+-   [Steps Tp Run](##Steps-to-run)
+    [Challenge Information](#Challenge)
+    [Screenshot](##Screenshot)
 
 ## Steps to run
 
@@ -44,5 +50,3 @@ Perform below task in laravel framework:
 ## Screenshots
 
 ![Alt text](/public//Screenshot.png "Table")
-
-![Alt text](https://raw.githubusercontent.com/anup-basnet/children_data_crud/main/public/Screenshot.png)
