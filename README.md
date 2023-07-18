@@ -2,7 +2,7 @@
 
 ## Contents
 
--   [Steps Tp Run](#steps-to-run)
+-   [Steps To Run](#steps-to-run)
 -   [Challenge Information](#challenge)
 -   [Screenshot](#screenshots)
 
