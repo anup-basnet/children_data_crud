@@ -23,56 +23,73 @@
         @csrf
         @method("put")
         <table>
-            <tr>
-                <td>
-                    <input type="text" name="childFirstName" class="w-100" placeholder="child First Name" value="{{$child->childFirstName}}">
-                </td>
-                <td>
-                    <input type="text" name="childMiddleName" class="w-100" placeholder="child Middle Name" value="{{$child->childMiddleName}}">
-                </td>
-                <td>
-                    <input type="text" name="childLastName" class="w-100" placeholder="child Last Name" value="{{$child->childLastName}}">
-                </td>
-                <td>
-                    <input type="text" name="childAge" class="w-100" placeholder="child Age" value="{{$child->childAge}}">
-                </td>
-                <td>
-                    <select name="gender" id="gender">
-                        <option value="default">Gender</option>
-                        <option value="Male" {{ $child->gender=="Male" ? "selected" : "" }}>Male</option>
-                        <option value="Female" {{ $child->gender=="Female" ? "selected" : "" }}>Female</option>
-                    </select>
-                </td>
-                <td>
-                    <input type="checkbox" name="differentAddress" class="different-address-checkbox w-100" value="{{$child->differentAddress}}" {{ $child->differentAddress=="1" ? "checked" : "" }}>
-                    <label for="differentAddress">Different Address?</label>
-                </td>
-                <td>
-                    <input type="text" name="childAddress" class="w-100" placeholder="child Address" value="{{$child->childAddress}}" {{ $child->differentAddress=="1" ? "" : "disabled" }}>
-                </td>
-                <td>
-                    <input type="text" name="childCity" class="w-100" placeholder="child City" value="{{$child->childCity}}" {{ $child->differentAddress=="1" ? "" : "disabled" }}>
-                </td>
-                <td>
-                    <input type="text" name="childState" class="w-100" placeholder="child State" value="{{$child->childState}}" {{ $child->differentAddress=="1" ? "" : "disabled" }}>
-                </td>
-                <td>
-                    <select name="childCountry" id="country" {{ $child->differentAddress=="1" ? "" : "disabled" }}>
-                        <option value="">Country</option>
-                        <option value="USA" {{ $child->country=="USA" ? "selected" : "" }}>USA</option>
-                        <option value="Canada" {{ $child->country=="Canada" ? "selected" : "" }}>Canada</option>
-                        <option value="Nepal" {{ $child->country=="Nepal" ? "selected" : "" }}>Nepal</option>
-                        <option value="India" {{ $child->country=="India" ? "selected" : "" }}>India</option>
-                    </select>
-                </td>
-                <td>
-                    <input type="text" name="childZipCode" class="w-100" placeholder="child Zip Code" value="{{$child->childZipCode}}" {{ $child->differentAddress=="1" ? "" : "disabled" }}>
-                </td>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Child First Name</th>
+                    <th>Child Middle Name</th>
+                    <th>Child Last Name</th>
+                    <th>Child Age</th>
+                    <th>Child Gender</th>
+                    <th>Different Address?</th>
+                    <th>Child Address</th>
+                    <th>Child City</th>
+                    <th>Child State</th>
+                    <th>Child Country</th>
+                    <th>Child Zip Code</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="text" name="childFirstName" class="w-100" placeholder="child First Name" value="{{$child->childFirstName}}">
+                    </td>
+                    <td>
+                        <input type="text" name="childMiddleName" class="w-100" placeholder="child Middle Name" value="{{$child->childMiddleName}}">
+                    </td>
+                    <td>
+                        <input type="text" name="childLastName" class="w-100" placeholder="child Last Name" value="{{$child->childLastName}}">
+                    </td>
+                    <td>
+                        <input type="text" name="childAge" class="w-100" placeholder="child Age" value="{{$child->childAge}}">
+                    </td>
+                    <td>
+                        <select name="gender" id="gender">
+                            <option value="">Gender</option>
+                            <option value="Male" {{ $child->gender=="Male" ? "selected" : "" }}>Male</option>
+                            <option value="Female" {{ $child->gender=="Female" ? "selected" : "" }}>Female</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="differentAddress" class="different-address-checkbox w-75" value="{{$child->differentAddress}}" {{ $child->differentAddress=="1" ? "checked" : "" }} >
+                        <!-- <label for="differentAddress">Different Address?</label> -->
+                    </td>
+                    <td>
+                        <input type="text" name="childAddress" class="w-100" placeholder="child Address" value="{{$child->childAddress}}" {{ $child->differentAddress=="1" ? "" : "disabled" }}>
+                    </td>
+                    <td>
+                        <input type="text" name="childCity" class="w-100" placeholder="child City" value="{{$child->childCity}}" {{ $child->differentAddress=="1" ? "" : "disabled" }}>
+                    </td>
+                    <td>
+                        <input type="text" name="childState" class="w-100" placeholder="child State" value="{{$child->childState}}" {{ $child->differentAddress=="1" ? "" : "disabled" }}>
+                    </td>
+                    <td>
+                        <select name="childCountry" id="country" {{ $child->differentAddress=="1" ? "" : "disabled" }} >
+                            <option value="">Country</option>
+                            <option value="USA" {{ $child->childCountry=="USA" ? "selected" : "" }}>USA</option>
+                            <option value="Canada" {{ $child->childCountry=="Canada" ? "selected" : "" }}>Canada</option>
+                            <option value="Nepal" {{ $child->childCountry=="Nepal" ? "selected" : "" }}>Nepal</option>
+                            <option value="India" {{ $child->childCountry=="India" ? "selected" : "" }}>India</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" name="childZipCode" class="w-100" placeholder="child Zip Code" value="{{$child->childZipCode}}" {{ $child->differentAddress=="1" ? "" : "disabled" }}>
+                    </td>
+                </tr>
+            </tbody>
         </table>
 
         <div>
-            <input type="submit" value="Update Child Data" class="btn btn-success">
+            <input type="submit" value="Update Child Data" class="btn btn-success mt-2">
         </div>
     </form>
 

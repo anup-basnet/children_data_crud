@@ -13,9 +13,9 @@ class ChildController extends Controller
     }
 
     // Create table row
-    public function create(){
-        return view('children.create');
-    }
+    // public function create(){
+    //     return view('children.create');
+    // }
 
     // store table row
     public function store(Request $request){
